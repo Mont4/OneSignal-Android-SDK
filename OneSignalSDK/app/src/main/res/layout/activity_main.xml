@@ -1,0 +1,154 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context="com.onesignal.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/show_fullscreen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onFullScreenClicked"
+                android:text="Update App ID" />
+
+            <EditText
+                android:id="@+id/iamHost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="YOUR_APP_ID_HERE"
+                android:inputType="textPersonName" />
+
+            <Button
+                android:id="@+id/setTrigger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/unsubscribe"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_toEndOf="@+id/textView"
+                android:layout_toRightOf="@+id/textView"
+                android:onClick="onSetTrigger"
+                android:text="Set Trigger" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/triggerKey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Trigger Key"
+                    android:inputType="textPersonName" />
+
+                <EditText
+                    android:id="@+id/triggerValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Trigger Value"
+                    android:inputType="textPersonName" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/subscribe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/textView"
+                android:layout_toRightOf="@+id/textView"
+                android:onClick="onSubscribeClicked"
+                android:text="Subscribe" />
+
+            <Button
+                android:id="@+id/unsubscribe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/subscribe"
+                android:nestedScrollingEnabled="true"
+                android:onClick="onUnsubscribeClicked"
+                android:text="UnSubscribe" />
+
+            <Button
+                android:id="@+id/sendTags"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/unsubscribe"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_toEndOf="@+id/textView"
+                android:layout_toRightOf="@+id/textView"
+                android:onClick="onSendTagsClicked"
+                android:text="SEND TAGS" />
+
+            <Button
+                android:id="@+id/getTags"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onGetTagsClicked"
+                android:text="Get Tags" />
+
+            <Button
+                android:id="@+id/consentButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/sendTags"
+                android:layout_toEndOf="@+id/textView"
+                android:layout_toRightOf="@+id/textView"
+                android:onClick="onConsentButtonClicked"
+                android:text="Provide Consent" />
+
+            <Button
+                android:id="@+id/logoutEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/setEmail"
+                android:onClick="onLogoutEmailClicked"
+                android:text="Logout Email" />
+
+            <TextView
+                android:id="@+id/debugTextView"
+                android:layout_width="match_parent"
+                android:layout_height="80dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!--<WebView  xmlns:android="http://schemas.android.com/apk/res/android"-->
+              <!--android:id="@+id/webview"-->
+              <!--android:layout_width="fill_parent"-->
+              <!--android:layout_height="fill_parent"-->
+        <!--/>-->
+
+</RelativeLayout>
